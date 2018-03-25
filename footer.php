@@ -1,0 +1,1 @@
+<b> Hello this is my FOOTER page</b>
