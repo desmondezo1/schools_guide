@@ -11,19 +11,23 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
      <!-- pull in google font -->
     <link href="https://fonts.googleapis.com/css?family=Forum|Ubuntu" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-        <title>Schools Guide | Home Page </title>
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+    <?php if($extralinks != ""){
+                  echo $extralinks;
+              } ?>
+    <title>Schools Guide | <?php echo $pname; ?> </title>
           <style>
-
               body{
                 overflow-x: hidden;
                 margin:0;
                 padding: 0;
               }
+              <?php if($extracss != ""){
+                  echo $extracss;
+              } ?>
               header{
                   width: 100%;
               }
-
               /* The side navigation menu */
 
             .sidenav {
@@ -54,9 +58,7 @@
                 .sidenav a:hover {
                     color: #f1f1f1;
                 }
-                li{
-                    list-style-type: none;
-                }
+
                 /* Position and style the close button (top right corner) */
                 .sidenav .closebtn {
                     position: absolute;
@@ -76,12 +78,12 @@
 
               header .navbar{
                   display: flex;
-                  background: linear-gradient(90deg, #89f7fe,#66a6ff);
                   flex-direction: row;
+                  background: linear-gradient(90deg, #89f7fe,#66a6ff);
               }
              header .navbar{
-                background-color: #ffffff;
-                height: 60px;
+                background: linear-gradient(90deg, #89f7fe,#66a6ff);
+                height: auto;
                
                 z-index: 99;
                 /* margin: 6px; */
@@ -99,7 +101,6 @@
                 background: transparent;
                 border: none;
             }
-           
             .search-button{
                 position: relative;
                 right: 0;
@@ -179,12 +180,6 @@
                 border: 0.7px solid #fff;
                 background-color: #fff; 
             }
-            .find{
-                width: 100%;
-                padding: 20px;
-                font-size: 20px;
-                border: none;
-            }
             /* Make the school list scroll horizontally */
             section #scroll-schools{
                 background-color: #f3f3f3;
@@ -200,7 +195,7 @@
                 margin: 10px;
                 margin-top: 50px;
                 display: inline-block;
-                width: 200px;
+                width: 250px;
                 box-shadow: -1px 1px 9px 0px black;
               
             }
@@ -253,11 +248,6 @@
             }
             section .first, .second, .third{
             padding: 0px 20px;
-
-            }
-            section .first img, .second img, .third img{
-                width: 200px;
-                height: 200px;
             }
             .footer-container{
                 background: #333;
@@ -405,7 +395,6 @@
 
                 .container-info{
                     display: flex;
-                    margin-top: 20px;
                 }
             }
             @media only screen and (min-width: 803px){
@@ -449,7 +438,7 @@
                 }
                 section .first, .second, .third{
                     width: 33.3%;
-                    padding: 45px;
+                    padding: 10px;
                     
                 }
                 .footer-container{
@@ -467,12 +456,27 @@
     <body>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+         <?php 
+
+            //this loops the new nav links for the page
+            if($navlink !=""){
+            foreach($navlink as $x => $x_value) {
+                echo "<a href=". $x_value .">". $x . "</a>";
+                
+            }
+            }else{
+
+
+            ?>
+
             <a href="about">About</a>
             <a href="blog">Blog</a>
             <a href="schools">Schools</a>
             <a href="contact">Contact</a>
             <a href="auth">Login</a>
             <a href="register-school">Register school </a>
+            <?php } ?>
         </div>
         <header>
             
@@ -480,12 +484,24 @@
                 <a class="navbar-button" onclick="openNav()">
                 <i class="fas fa-bars"></i>
                 </a>
-                <div class="h-brand">
+                <div class=" h-brand">
                    <span class="brand"> Schools Guide</span>
                     <img src="images/Schoolsguidelogo.png">
                 </div>
                 <div class="h-links">
                     <ul>
+                    <?php 
+
+                    //this loops the new nav links for the page
+                    if($navlink !=""){
+                    foreach($navlink as $x => $x_value) {
+                        echo "<li><a href=". $x_value .">". $x . "</a></li>";
+                        
+                    }
+                     }else{
+
+                    
+                    ?>
                     <li><a href="about">About</a></li>
                     <li><a href="blog">Blog</a></li>
                     <li><a href="schools">Schools</a></li>
@@ -497,6 +513,7 @@
                         color:  black;
                         border:  0.7px solid  black;
                     " href="">Login</a></li>
+                     <?php }?>
                     </ul>
                 </div>
                 
@@ -507,93 +524,3 @@
             </div>
         </header>
       
-       
-    <section>
-            <article>
-                <div class="container first-section">
-                    <div class="background-image">
-                    <?php include("findit.php"); ?>
-                   
-                    </div>
-                   
-                </div> 
-            </article>
-            
-            <article id="scroll-schools">
-            <center><span class="best-school-title" 
-                                    style="
-                                    position: absolute;
-                                    right: 0;
-                                    left: 0;
-                                    background: #fff;
-                                    font-family: sans-serif;
-                                    font-weight: bold;
-                                    font-size: 29px;">
-                                                    Featured schools
-                                                    </span></center>
-                 <?php include("schools.php"); ?>
-            </article>
-        </section>
-                
-                   
-
-        <section>
-        <div class="container container-info">
-            <div class="first p">
-                        <img src="images/parents.jpg" width="100%">
-                        <p>
-                           <h4> Search for the right school by</h4>
-                            <ul>
-                                <li>Location</li>
-                                <li>Budget</li>
-                                <li>School type</li>
-                                <li>Boarding, Day school or both</li>
-                            </ul>
-                       </p>
-                    </div>
-
-                    <div class="second p" >
-                    <img src="images/library.jpg" width="100%">
-                    <h4>More than 20,000 tops schools are register and ranked using</h4>
-                    <p> 
-                            <ul>
-                                
-                                <li>Parent honest reviews</li>
-                                <li>Academic performance</li>
-                                <li>Location</li>
-                            </ul>
-                    </p>
-                    </div>
-
-                    <div class="third p" style="font-family: 'PT Sans', sans-serif;">
-                    <img src="images/reg.png" width="100%">
-                    <p>
-                     <h4>Search for the right school by</h4>
-                            <ul>
-                                <li>Location</li>
-                                <li>Honest reviews</li>
-                                <li>Location</li>
-                                <li>Location</li>
-                            </ul>
-                    </p>
-                    </div>
-            </div>
-           
-         <section>
-         <?php include("footer.php"); ?>
-         </div>
-         <script>
-            /* Set the width of the side navigation to 250px */
-            function openNav() {
-                document.getElementById("mySidenav").style.width = "250px";
-            }
-
-            /* Set the width of the side navigation to 0 */
-            function closeNav() {
-                document.getElementById("mySidenav").style.width = "0";
-            }
-         </script>
-    </body>
-
-    
-</html>

@@ -57,7 +57,7 @@
                 <datalist name="city" id="city-list">
                 
                 </datalist>
-                <button >Find</button>
+                <button class="find">Find</button>
         </form>
 
 
