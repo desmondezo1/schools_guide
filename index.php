@@ -3,6 +3,8 @@
     <!-- Show fav icon-->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <!-- Scale -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- pull in font-awesome -->
@@ -34,7 +36,7 @@
                 top: 0; /* Stay at the top */
                 left: 0;
                 box-shadow: 0px 1px 28px -7px black;
-                background-color: #000; /* Black*/
+                background-color: #6eb9ff; /* Blueish*/
                 overflow-x: hidden; /* Disable horizontal scroll */
                 padding-top: 60px; /* Place content 60px from the top */
                 transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -45,7 +47,7 @@
                 padding: 8px 8px 8px 32px;
                 text-decoration: none;
                 font-size: 25px;
-                color: #818181;
+                color: #fbf9f9;
                 display: block;
                 transition: 0.3s;
             }
@@ -78,6 +80,7 @@
                   display: flex;
                   background: linear-gradient(90deg, #89f7fe,#66a6ff);
                   flex-direction: row;
+                  width: 100%;
               }
              header .navbar{
                 background-color: #ffffff;
@@ -125,6 +128,15 @@
             header .container .h-links{
                 display: none;
             }
+            .carousel {
+                position: absolute;
+                height: 70vh;
+                width: 100vw;
+            }
+            .carousel .item{
+                margin: 0px 0px 10px 0px;
+                
+            }
             .search-form{
                 background-color: #00000047;
                 padding: 20px;
@@ -143,7 +155,7 @@
                 height: auto;
             }
             article .first-section .background-image{
-            background-image: url(images/2.jpg);
+           /* background-image: url(images/2.jpg);*/
             background-repeat: no-repeat;
             background-size: cover;
             height:70vh;
@@ -260,7 +272,7 @@
                 height: 200px;
             }
             .footer-container{
-                background: #333;
+                background: #398cd6;
             }
             .footer-container section{
                 text-align: justify;
@@ -313,7 +325,7 @@
                 flex-grow: 1;
                 text-align: center;
                 list-style-type: none;
-            }
+            }fg
             footer .social ul li:hover{
                 font-size:35px;
                 border-right: 0.7px solid #ccc;
@@ -390,9 +402,12 @@
                     }
                 /* Show logo when the screen is 500px */
                 header .container .h-brand img{
-                        height: 58px;
+                        height: 120px;
                         display: block;
+                        box-shadow: 0px 3px 20px 3px #7fdfff;
                 }
+              
+
                 /* Remove Brand Text when the screen is 500px */
                  header .container .h-brand .brand{
                          display: none;
@@ -423,7 +438,7 @@
                     list-style-type: none;
                     padding: 10px;
                     margin-right: 10px;
-
+                    font-size: 18px;
                 }
                 header .container .h-links ul li#register-school{
                     border-radius: 6%;
@@ -432,6 +447,7 @@
                     padding: 10px;
                     background-color: #000000;
                     color: white;
+                    
                     border-radius: 6%;
                     border: 0.7px solid  black;
                 }
@@ -493,10 +509,12 @@
                     <li id="register-school"><a href="register-school">Register School</a></li>
                     <li><a style="
                         padding: 10px;
-                        background-color: rgba(165, 220, 134, 0.2);
-                        color:  black;
-                        border:  0.7px solid  black;
-                    " href="">Login</a></li>
+                        /* background-color: rgba(165, 220, 134, 0.2);*/
+                      /* color:  black; */
+                        background-color: rgb(91, 255, 0);
+                         color: #271e1e;
+                        /*border:  0.7px solid  black;*/
+                    " href="auth">Login</a></li>
                     </ul>
                 </div>
                 
@@ -510,10 +528,42 @@
        
     <section>
             <article>
-                <div class="container first-section">
-                    <div class="background-image">
+                <div class="first-section">
+
+            <div class="background-image">
+
+
+                <div class="carousel slide" data-ride="carousel" id="carousel-1">
+                <div class="carousel-inner" role="listbox">
+                
+                    <div class="item" style="width: 100%; height:100%;">
+                        <img src="images/b.jpg" width="100%" height="100%" alt="Slide Image">
+                    </div>
+
+                    <div class="item active" style="width: 100%; height:100%;">
+                        <img src="images/1.jpeg" width="100%" height="100%" alt="Slide Image">
+                    </div>
+
+                    <div class="item" style="width: 100%; height:100%;">
+                        <img class="img-responsive" width="100%" height="100%" src="images/2.jpg" alt="Slide Image" id="image-slide">
+                    </div>
+                </div>
+                <div><a class="left carousel-control" href="#carousel-1" role="button" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i><span class="sr-only">Previous</span></a>
+                    <a class="right carousel-control" href="#carousel-1" role="button" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i><span class="sr-only">Next</span></a>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-1" data-slide-to="0"></li>
+                    <li data-target="#carousel-1" data-slide-to="1" class="active"></li>
+                    <li data-target="#carousel-1" data-slide-to="2"></li>
+                </ol>
+              </div>
+
+
+                    
                     <?php include("findit.php"); ?>
-                   
+
+
+
                     </div>
                    
                 </div> 
@@ -539,6 +589,7 @@
 
         <section>
         <div class="container container-info">
+        <h4> Whats in it for Parents, students, and Edu stakeholders </h4>
             <div class="first p">
                         <img src="images/parents.jpg" width="100%">
                         <p>
@@ -582,6 +633,8 @@
          <section>
          <?php include("footer.php"); ?>
          </div>
+         <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
          <script>
             /* Set the width of the side navigation to 250px */
             function openNav() {

@@ -218,6 +218,7 @@ $extracss = "
 
 //adds links for the navigation
 $navlink["Home"] = "../";
+$navlink["About"] = "../about";
 $navlink["Blog"] = "../blog";
 
 $navlink["Register school"] = "../register-school";

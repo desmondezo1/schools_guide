@@ -19,6 +19,9 @@ $extracss = "
     margin: 30px;
     font-family: 'Open Sans', sans-serif;
     }
+    .footer-container {
+        background: #398cd6;
+    }  
 ";
 
 //adds links for the navigation
@@ -84,5 +87,16 @@ $navlink["Login"] = "../auth";
 
     </div>
     <?php include("../footer.php"); ?>
+    <script>
+            /* Set the width of the side navigation to 250px */
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+         </script>
     </body>
 </html>

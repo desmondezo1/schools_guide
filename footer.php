@@ -29,8 +29,8 @@
                  <li><h4  style="margin: 0px; color: #fff;">Contact Info</h4></li> 
                
                 <li><span class="title">Address:</span><span  class="contact-info"> 34, Newton street, Benin city</span></li>
-                <li><span class="title">Email:</span><span  class="contact-info"> hello@schoolguide.com</span></li>
-                <li><span class="title">Phone:</span><span  class="contact-info">090123456789</span></li>
+                <li><span class="title">Email:</span><span  class="contact-info"> info@proschoolguide.com</span></li>
+                <li><span class="title">Phone:</span><span  class="contact-info">08036376025, 07057911177</span></li>
             </ul>
         </section>
         

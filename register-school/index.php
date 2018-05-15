@@ -314,7 +314,7 @@ $navlink["Login"] = "../auth";
 			<div class="row main">
 				<div class="main-login main-center">
 				<h5>Register your school in simple steps</h5>
-					<form class="" method="post" action="#">
+					<form class="" method="post" action="php/process_reg_form_1.php">
 						
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Your Name</label>
@@ -341,7 +341,7 @@ $navlink["Login"] = "../auth";
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-users" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="schoolname" id="schoolname"  placeholder="Enter your School's name"/>
+									<input type="text" class="form-control" name="school_name" id="schoolname"  placeholder="Enter your School's name"/>
 								</div>
 							</div>
 						</div>
@@ -361,7 +361,7 @@ $navlink["Login"] = "../auth";
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+									<input type="password" class="form-control" name="confirm_password" id="confirm"  placeholder="Confirm your Password"/>
 								</div>
 							</div>
 						</div>
@@ -412,7 +412,7 @@ $navlink["Login"] = "../auth";
 					</div>
 
 						<div class="form-group ">
-							<a href="http://deepak646.blogspot.in" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</a>
+							<button type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
 						</div>
 
 						

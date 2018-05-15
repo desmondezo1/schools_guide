@@ -15,7 +15,7 @@
     <?php if($extralinks != ""){
                   echo $extralinks;
               } ?>
-    <title>Schools Guide | <?php echo $pname; ?> </title>
+    <title>ProSchoolGuide | <?php echo $pname; ?> </title>
           <style>
               body{
                 overflow-x: hidden;
@@ -30,20 +30,19 @@
               }
               /* The side navigation menu */
 
-            .sidenav {
-                height: 100%; /* 100% Full-height */
-                width: 0; /* 0 width - change this with JavaScript */
-                position: fixed; /* Stay in place */
-                z-index: 9999;/* Stay on top */
-                top: 0; /* Stay at the top */
-                left: 0;
-                box-shadow: 0px 1px 28px -7px black;
-                background-color: #000; /* Black*/
-                overflow-x: hidden; /* Disable horizontal scroll */
-                padding-top: 60px; /* Place content 60px from the top */
-                transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+         .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            box-shadow: 0px 1px 28px -7px black;
+            background-color: #6eb9ff;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
             }
-
             /* The navigation menu links */
             .sidenav a {
                 padding: 8px 8px 8px 32px;
@@ -84,7 +83,7 @@
              header .navbar{
                 background: linear-gradient(90deg, #89f7fe,#66a6ff);
                 height: auto;
-               
+                width: 100%;
                 z-index: 99;
                 /* margin: 6px; */
                 padding: 5px;
@@ -94,7 +93,7 @@
                     
                     }
             .navbar-button{
-                position: absolute;
+                position:relative;
                 padding: 9px;
                 margin-left: 10px;
                 font-size: 30px;
@@ -102,7 +101,7 @@
                 border: none;
             }
             .search-button{
-                position: relative;
+                position: absolute;
                 right: 0;
                 width: auto;
                 background: none;
@@ -250,8 +249,10 @@
             padding: 0px 20px;
             }
             .footer-container{
-                background: #333;
+              
+            background: #398cd6;
             }
+            
             .footer-container section{
                 text-align: justify;
                 padding-top: 20px;
@@ -367,6 +368,10 @@
                 --
 
                 */
+                /* FOR THE FINAL REGISTRATION PAGE */
+                .form-group { 
+                      width: 360px;
+                 }  
                 article .first-section .background-image{
                         height:80vh;
                 }
@@ -379,9 +384,13 @@
                         font-weight: bold;
                     }
                 /* Show logo when the screen is 500px */
-                header .container .h-brand img{
-                        height: 58px;
+                header .container .h-brand img {
+                 
+                        height: 90px;
                         display: block;
+                        position: absolute;
+                        box-shadow: 0px 3px 20px 3px #7fdfff;
+            
                 }
                 /* Remove Brand Text when the screen is 500px */
                  header .container .h-brand .brand{
@@ -398,6 +407,15 @@
                 }
             }
             @media only screen and (min-width: 803px){
+
+                /* FOR THE FINAL REGISTRATION PAGE */
+                .plans{
+                    display:flex;
+                }
+                .form-group { 
+                      width: 760px;
+                 }
+                 /*END OF FINAL PAGE CSS */
                 header .container .h-links{
                     margin: auto;
                     display: block;
@@ -485,7 +503,7 @@
                 <i class="fas fa-bars"></i>
                 </a>
                 <div class=" h-brand">
-                   <span class="brand"> Schools Guide</span>
+                   <span class="brand"> ProSchoolGuide</span>
                     <img src="images/Schoolsguidelogo.png">
                 </div>
                 <div class="h-links">
