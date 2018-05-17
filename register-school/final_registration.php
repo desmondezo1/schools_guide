@@ -244,7 +244,7 @@ footer{
                         </div>
                         </button>
                         
-                      
+                      65t
                         <input type="file" class="input" class="form-control" id="imgInp">
 
                     </div>
