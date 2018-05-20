@@ -31,6 +31,15 @@ $navlink["Contact"] = "../contact";
 $navlink["Register School"] = "../register-school";
 $navlink["Login"] = "../auth";
 
+$footerlink1["Home"] = "../";
+$footerlink1["About"] = "../about";
+$footerlink1["Contact"] = "../contact";
+$footerlink1["Register School"] = "../register-school";
+
+$footerlink2["Blog"] = "../blog";
+$footerlink2["Review"] = "../review";
+$footerlink2["How To"] = "../about#how";
+$footerlink2["Contact us"] = "../contact";
 ?>
 
 <?php include("../header.php"); ?>

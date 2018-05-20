@@ -2,24 +2,45 @@
     <div class="container footer-container">
         <section class="section1 l">
             <ul style="">
-                <li><a href="#">Home</a></li>
+            <?php
+            //this loops the new nav links for the page
+            if(@$footerlink1 !=""){
+            foreach($footerlink1 as $x => $x_value) {
+               
+                echo "<li><a href=". $x_value .">". $x ."</a></li>";
+                
+            }
+            }else{
+                ?>
+                <li><a href="">Home</a></li>
                 <li><a href="about">About</a></li>
                <li><a href="contact">contact</a></li>
                <li><a href="register-school">Register a school</a></li>
                 
                <!-- <li><img src="images/Schoolsguidelogo.png"></li>
                --> 
+            <?php }?>
             </ul>
         </section>
 
         <section class="section2 l">
             
             <ul>     
-                                      
+            <?php
+            //this loops the new nav links for the page
+            if(@$footerlink2 !=""){
+            foreach($footerlink2 as $x => $x_value) {
+               
+                echo "<li><a href=". $x_value .">". $x ."</a></li>";
+                
+            }
+            }else{
+                ?>                    
                 <li><a href="blog">Blog</a></li>
                 <li><a href="review">Review</a></li>
                 <li><a href="about/#how">How to use</a></li>
                 <li><a href="contact">Contact us</a></li>
+            <?php } ?>
             </ul>
         </section>
 
